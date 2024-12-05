@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 5vh 5vw;
   background: black;
-  overflow:hidden;
+  overflow: hidden;
 }
 
 * {
@@ -35,7 +35,7 @@ p {
   position: absolute;
   left: 50%;
   margin-left: -10vw;
-  top: 50%;
+  top: 40%; /* Ajusta o topo para aumentar a distância superior */
   margin-top: -5vh;
   text-align: center;
   min-width: 200px;
