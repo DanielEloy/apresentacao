@@ -16,25 +16,38 @@ body {
       transparent 80px);
 }
 
-@media (max-width: 768px) {
-  img[alt="FotoPerfil"] {
-    float: none;
-    display: block;
-    margin: 20px auto !important;
-    width: 120px;
-  }
+.CabecarioCurriculo {
+  position: relative; 
+  z-index: 2; /* Garante que o texto fique na frente */
 }
 
 .FotoPerfil {
-  position: relative;
   float: right;
   width: 150px;
-  margin: -40px 5vw 20px 20px;
+  margin: 20px 5vw 20px 20px; /* Ajuste aqui */
   border-radius: 8px;
   border: 2px solid rgba(30, 144, 255, 0.3);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-  top: 50px;
+}
+
+@media (max-width: 768px) {
+  .FotoPerfil {
+    float: none;
+    display: block;
+    width: 140px;
+    margin: 20px auto !important;
+    top: 0 !important; /* Reset do posicionamento */
+    position: relative; /* Garante o comportamento padrão */
+  }
+  
+  header {
+    padding-top: 1rem; /* Espaço extra no cabeçalho */
+  }
+  
+  .CabecarioCurriculo {
+    margin-top: 0; /* Remove margem superior */
+    padding-top: 1rem; /* Espaçamento interno */
+  }
 }
 
 .CabecarioCurriculo {
