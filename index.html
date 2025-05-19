@@ -1,15 +1,223 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apresentação</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currículo de Daniel Eloy</title>
+  <meta name="color-scheme" content="dark">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/7ccdac9993.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 </head>
+
 <body>
-    <div class="msg">Carregando histórico</div>
-    <div id="console"></div>
-    
-    <script src="index.js"></script>
+  <header>
+    <img class="FotoPerfil" src="imagens/FotoPerfil.jpg" alt="FotoPerfil">
+    <div class="CabecarioCurriculo">
+      <h1>Currículo</h1>
+      <h1 id="assinatura">Daniel J. C. Eloy</h1>
+    </div>
+  </header>
+
+
+  <main>
+    <!-- Informações Pessoais -->
+    <section id="informacoes-pessoais">
+      <h2>Informações Pessoais</h2>
+      <ul>
+        <li><b>Nome:</b> Daniel Jefferson Correia Eloy</li>
+        <li><b>Telefone:</b> +55 (11) 99187-9192</li>
+        <li><b>E-mail:</b> <a href="mailto:dan_eloy@hotmail.com"><i class="fa-solid fa-envelope"></i>
+            dans_eloy@hotmail.com</a></li>
+      </ul>
+    </section>
+
+    <!-- Contatos -->
+    <section id="contatos">
+      <h2>Contatos</h2>
+      <ul>
+        <li><a href="https://www.linkedin.com/in/daniel-eloy-6820661a5/" target="_blank"><i
+              class="fa-brands fa-linkedin"></i> LinkedIn</a></li>
+        <li><a href="https://github.com/DanielEloy" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a></li>
+        <li><a href="https://wa.me/5511991879192?text=Oi,%20vim%20pelo%20seu%20currículo%20em%20HTML" target="_blank"><i
+              class="fa-brands fa-whatsapp"></i> Fale comigo pelo WhatsApp</a></li>
+
+      </ul>
+    </section>
+
+    <!-- Endereço -->
+    <section id="endereco">
+      <h2>Endereço</h2>
+      <p>Avenida doutor Martin Luther king, nº 419, bairro Umuarama, Osasco, SP, Brasil, Cep: 06030-010</p>
+      <li><a href="https://maps.app.goo.gl/hGCssBwci1neZEpD6" target="_blank"><i class="fa-solid fa-location-dot"></i>
+          Localização</a></li>
+
+    </section>
+
+    <!-- Experiência Profissional -->
+    <section id="experiencia-profissional">
+      <h2>Experiência Profissional: Analista Funcional PLENO</h2>
+      <div class="experience">
+        <h2>Bank of China Brasil (BOC) | Janeiro/2023 á Maio/2025 </h2>
+        <p><strong>Cargo:</strong> Analista Funcional | TI - Desenvolvimento de Sistemas</p>
+        <p><em>Atuação estratégica no desenvolvimento e parametrização de sistemas bancários, com foco em compliance,
+            crédito e gestão de riscos.</em></p>
+
+        <h3>Principais Responsabilidades:</h3>
+        <ul>
+          <li>
+            <strong>Gestão e parametrização de sistemas críticos:</strong>
+            <ul>
+              <li><strong>SQL Server:</strong> Análise de processamento, otimização de queries e modificações
+                estruturais para melhoria de performance.</li>
+              <li><strong>PLD (SIRCOI):</strong> Implementação de regras para prevenção à lavagem de dinheiro e
+                compliance financeiro.</li>
+              <li><strong>GRI (Gestão de Riscos):</strong> Controle de riscos operacionais via sistemas AOL, Agenda
+                Legal e Controles Internos (âmbito contábil).</li>
+              <li><strong>Winfina:</strong> Suporte técnico para crédito imobiliário (IMB) e integração de processos.
+              </li>
+              <li><strong>Sispro e FepWeb:</strong> Gestão patrimonial e operações de câmbio.</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Implantação do Autbank:</strong>
+            <ul>
+              <li>Coordenação ativa da fase de implantação do sistema Autbank, envolvendo mapeamento de processos,
+                customização de módulos e integração com sistemas legados.</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="experience">
+        <h2>SIS Consultoria | Maio/2021 á Maio/2022</h2>
+        <p><strong>Cargo:</strong> Desenvolvedor Java | BGCC-Client Captura</p>
+        <p><em>Atuação em projetos para instituições financeiras, com ênfase em qualidade e segurança:</em></p>
+
+        <ul>
+          <li><strong>Testes e validação:</strong> Elaboração de casos de teste via SoapUI e Postman para APIs
+            REST/SOAP, garantindo conformidade funcional.</li>
+          <li><strong>Gestão de mudanças:</strong> Abertura e acompanhamento de Requisições de Serviço (RS) no SIGS, com
+            aprovação de superintendências e DITI.</li>
+          <li><strong>Segurança de código:</strong> Análise de vulnerabilidades com Fortify SCA, priorizando correções
+            críticas/altas antes da etapa de QA.</li>
+        </ul>
+      </div>
+
+      <div class="experience">
+        <h2>HexaIT | Projetos </h2>
+        <p><strong>Cargo:</strong> Consultor de TI | Projetos Setor Financeiro</p>
+        <ul>
+          <li>Suporte técnico e análise de sistemas para clientes corporativos (Stefanini, Itaú, Banco do Brasil, Rede
+            D’Or), incluindo integrações em ambientes QMC Telecom e Advanta.</li>
+        </ul>
+      </div>
+
+      <div class="formacaoacademica">
+        <h2>FORMAÇÃO ACADÊMICA</h2>
+        <ul>
+          <li>Pós-graduação – Desenvolvimento Web Full Stack - Unopar (2023)</li>
+          <li>Pós-graduação – Aplicações Mobile - Unopar (2023)</li>
+          <li>Bacharelado – Sistemas da Informação – Anhanguera (2022)</li>
+          <li>Tecnólogo – Logística – ETEC (2014)</li>
+        </ul>
+      </div>
+
+      <div class="skills">
+        <h2>Competências Técnicas</h2>
+        <ul>
+          <li class="linguagens">
+            <strong>Linguagens:</strong>
+            <i class="fab fa-java"></i> JAVA,
+            <i class="fas fa-database"></i> SQL,
+            <i class="fab fa-html5"></i> HTML,
+            <i class="fab fa-css3-alt"></i> CSS,
+            <i class="fab fa-js-square"></i> JAVASCRIPT,
+            <i class="fab fa-python"></i> PYTHON,
+            <i class="fas fa-robot"></i> PROMPT PARA IA
+          </li>
+          <li><strong>Ferramentas:</strong> SAP, SEI, Postman, Fortify, SIRCOI, Winfina, Visual Studio, Eclipse,
+            Autbank, SoapUI.</li>
+          <li><strong>Bancos de Dados:</strong> MySQL, SQL Server</li>
+          <li><strong>Metodologias:</strong> Ciclo de Vida de Sistemas (SDLC), gestão ágil de demandas</li>
+        </ul>
+      </div>
+
+      <div class="transition">
+        <h2>Transição para TI</h2>
+        <p>Migração estratégica para área de tecnologia, com capacitação contínua em SAP, Java e gestão de sistemas
+          bancários.</p>
+      </div>
+    </section>
+  </main>
+  <div class="formulario">
+    <div class="form-container">
+      <form action="https://formspree.io/f/mvgalpwr" method="post">
+        <label>
+          <h1>
+            <span id="mensagem-titulo">Me envie uma mensagem </span>
+            <i class="fa-regular fa-comment"></i>
+          </h1>
+        </label>
+
+        <div class="form-group">
+          <label for="name">Nome:</label>
+          <input type="text" id="name" name="name" required placeholder="Digite seu nome">
+        </div>
+
+        <div class="form-group">
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" required placeholder="exemplo@email.com">
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Telefone:</label>
+          <input type="tel" id="phone" name="phone" pattern="[0-9]{11}" placeholder="(00) 00000-0000">
+        </div>
+
+        <div class="form-group">
+          <label for="mensagem">Mensagem:</label>
+          <textarea id="mensagem" name="mensagem" required placeholder="Oi, temos uma vaga para você"
+            rows="5"></textarea>
+        </div>
+
+        <div class="form-group">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" id="lgpd" name="lgpd" required>
+            <label for="lgpd">Aceito compartilhar meus dados de acordo com a Lei Geral de Proteção de Dados
+              (LGPD)</label>
+          </div>
+          <div class="error-message" id="lgpd-error">
+            <i class="fa fa-exclamation-circle"></i>
+            <span>Por favor, aceite nossa política de privacidade para continuar</span>
+          </div>
+        </div>
+
+
+        <div class="form-group">
+          <input type="submit" value="Enviar">
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="download-container">
+    <a href="curriculoATS/Curriculo_Daniel_Eloy_2025_ATS.pdf" download class="download-btn-ats">
+      <i class="fas fa-file-download"></i> Baixar Currículo ATS
+    </a>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Daniel Eloy. Todos os direitos reservados.</p>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="js/index.js"></script>
+
 </body>
+
 </html>
