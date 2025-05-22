@@ -5,6 +5,8 @@ Projeto desenvolvido com HTML, CSS e JavaScript para demonstrar habilidades em f
 ## Acesso rápido
 🔗 https://danieleloy.github.io/apresentacao/
 
+🔗 https://apresentacaocv.netlify.app/
+
 ## Tecnologias
 - HTML5
 - CSS3
