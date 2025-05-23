@@ -17,15 +17,17 @@ body {
 }
 
 .CabecarioCurriculo {
-  position: relative; 
-  z-index: 2; /* Garante que o texto fique na frente */
-  
+  position: relative;
+  z-index: 2;
+  /* Garante que o texto fique na frente */
+
 }
 
 .FotoPerfil {
   float: right;
   width: 150px;
-  margin: 20px 5vw 20px 20px; /* Ajuste aqui */
+  margin: 20px 5vw 20px 20px;
+  /* Ajuste aqui */
   border-radius: 8px;
   border: 2px solid rgba(30, 144, 255, 0.3);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -37,17 +39,22 @@ body {
     display: block;
     width: 140px;
     margin: 20px auto !important;
-    top: 0 !important; /* Reset do posicionamento */
-    position: relative; /* Garante o comportamento padrão */
+    top: 0 !important;
+    /* Reset do posicionamento */
+    position: relative;
+    /* Garante o comportamento padrão */
   }
-  
+
   header {
-    padding-top: 1rem; /* Espaço extra no cabeçalho */
+    padding-top: 1rem;
+    /* Espaço extra no cabeçalho */
   }
-  
+
   .CabecarioCurriculo {
-    margin-top: 0; /* Remove margem superior */
-    padding-top: 1rem; /* Espaçamento interno */
+    margin-top: 0;
+    /* Remove margem superior */
+    padding-top: 1rem;
+    /* Espaçamento interno */
   }
 }
 
@@ -149,14 +156,35 @@ header h1:nth-child(2)::after {
   }
 }
 
+.miniMapa {
+  width: 400px;
+  height: 250px;
+  border: 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  background: rgba(255,255,255,0.9);
+  margin: 1rem 0 1rem 35px;
+  transition: filter 0.3s ease;
+  display: block; 
+}
+
+/* Responsividade com ajuste da margem */
+@media (max-width: 768px) {
+  .miniMapa {
+    width: calc(100% - 30px);
+    height: 250px;
+    margin: 1rem 15px;
+  }
+}
+
 /* ===== SEÇÃO DE FORMULÁRIO ATUALIZADA ===== */
 .form-container {
   background: rgba(25, 25, 45, 0.95);
   backdrop-filter: blur(8px);
   border-radius: 12px;
-  padding: 3.9rem;
+  padding: 2rem;
   border: 1px solid rgba(30, 144, 255, 0.2);
-  width: 100%;
+  width: 90%;
   max-width: 500px;
   margin: 20px auto;
   position: relative;
@@ -194,7 +222,7 @@ header h1:nth-child(2)::after {
 .form-container h1 i {
   font-size: 1.4em;
   color: #1e90ff;
-  filter: drop-shadow(0 0 8px rgba(30, 144, 255, 0.5));
+  filter: drop-shadow(0 0 8px rgb(253, 254, 255));
   transition: transform 0.3s ease;
 }
 
@@ -213,37 +241,67 @@ header h1:nth-child(2)::after {
 }
 
 .form-group {
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.75rem;
   display: grid;
-  grid-template-columns: 100px 1fr;
-  gap: 15px;
+  grid-template-columns: 1fr;
+  gap: 3px;
   align-items: center;
 }
 
 .form-group label {
   font-family: 'Segoe UI', sans-serif;
   font-size: 0.95rem;
-  color: #ffffff;
+  color: white;
   font-weight: 500;
 }
 
+#mensagem {
+  min-height: 100px;
+  resize: vertical;
+  transition: all 0.3s ease;
+}
+
+#mensagem:not(:placeholder-shown) {
+  background-color: rgb(54 98 142 / 33%);
+  color: #ffffff;
+  border-color: #1e90ff;
+}
+
+/* Estilos combinados para focus e campos preenchidos */
+.form-group input:focus,
 .form-group input,
 .form-group textarea {
   padding: 12px;
-  background: rgba(255, 255, 255, 0.1);
-  border: 2px solid rgba(30, 144, 255, 0.3);
-  border-radius: 8px;
-  font-size: 1rem;
-  color: #ffffff;
-  transition: all 0.3s ease;
-  width: 100%;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
+  background: white;
   outline: none;
   border-color: #1e90ff;
+  border-radius: 8px;
+  font-size: 1rem;
   box-shadow: 0 0 0 3px rgba(30, 144, 255, 0.1);
+  border-width: 2.5px;
+  color: #000000;
+  transition: all 0.3s ease;
+}
+
+.btn-enviar {
+  width: 100%;
+  height: auto;
+  padding: 14px 24px;
+  display: block;
+  margin: 3% auto 0;
+  background: linear-gradient(135deg, #1e90ff 0%, #0066cc 100%);
+  color: white !important;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-enviar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(30, 144, 255, 0.3);
 }
 
 input[type="submit"] {
@@ -279,7 +337,7 @@ input[type="checkbox"] {
 
 .checkbox-wrapper label {
   font-size: 0.85rem;
-  color: #ffffff;
+  color: white;
   line-height: 1.4;
   cursor: pointer;
   user-select: none;
@@ -334,32 +392,25 @@ input[type="checkbox"] {
   margin: 0 5px
 }
 
-#mensagem {
-  white-space: nowrap;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  margin: 0;
-  display: block;
-  text-align: left;
-  margin: 20px 0;
-}
-
 footer {
   position: fixed;
-  right: 20px;
-  bottom: 20px;
+  right: 16px;
+  bottom: 16px;
+  z-index: 1000; /* garante que fique acima de tudo */
   opacity: 0.7;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: #ffffff;
-  padding: 10px 20px;
-  background: rgba(25, 25, 45, 0.9);
-  backdrop-filter: blur(8px);
-  border-radius: 8px;
+  padding: 8px 16px;
+  background: rgba(25, 25, 45, 0.7); /* leve transparência */
+  backdrop-filter: blur(6px);        /* efeito de vidro */
+  border-radius: 6px;
   border: 1px solid rgba(30, 144, 255, 0.2);
   transition: all 0.3s ease;
+  pointer-events: auto;
+  max-width: 90vw; /* evita que ultrapasse a tela em mobile */
 }
 
+/* Efeito ao passar o mouse (desktop) */
 footer:hover {
   opacity: 1;
   transform: translateY(-2px);
@@ -369,33 +420,38 @@ footer:hover {
 @media (max-width: 480px) {
   .form-group {
     grid-template-columns: 1fr;
-    gap: 8px;
+    gap: 10px;
+    margin-bottom: 1rem;
   }
 
   input[type="submit"] {
     grid-column: span 1;
+    width: 100%;
+    margin-top: 1rem;
   }
 
   .form-container {
     padding: 1.5rem;
-    margin: 10px;
+    margin: 8px;
+    border-radius: 8px;
+    width: 95%;
   }
 
   footer {
     position: static;
-    width: 100%;
-    margin-top: 2rem;
-    text-align: center;
+    width: calc(100% - 16px);
+    margin: 1rem auto 0;
+    font-size: 0.8rem;
   }
 }
 
 @media (max-width: 768px) {
   body {
-    padding: 15px;
+    padding: 12px;
   }
 
   header h1 {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
 }
 
@@ -439,13 +495,15 @@ footer:hover {
 }
 
 .ats-version {
-  display: none; /* Mantém oculto na versão web */
+  display: none;
+  /* Mantém oculto na versão web */
   font-family: Arial, sans-serif;
   font-size: 12pt;
   color: #000;
   line-height: 1.5;
   padding: 20px;
-  background: white !important; /* Força fundo branco no PDF */
+  background: white !important;
+  /* Força fundo branco no PDF */
 }
 
 .ats-version * {
@@ -469,6 +527,7 @@ footer:hover {
   text-decoration: none !important;
   color: #000 !important;
 }
+
 .error-message {
   display: none;
   opacity: 0;
@@ -482,6 +541,8 @@ footer:hover {
 
 .download-btn-ats {
   display: inline-block;
+  margin-top: 20px;
+  margin-left: 10px;
   padding: 12px 24px;
   background: linear-gradient(135deg, #1e90ff, #0066cc);
   color: white !important;

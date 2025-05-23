@@ -55,8 +55,12 @@
       <h2>Endereço</h2>
       <p>Avenida doutor Martin Luther king, nº 419, bairro Umuarama, Osasco, SP, Brasil, Cep: 06030-010</p>
       <li><a href="https://maps.app.goo.gl/hGCssBwci1neZEpD6" target="_blank"><i class="fa-solid fa-location-dot"></i>
-          Localização</a></li>
-
+          Localização<br></a></li>
+      <!-- Mapa Embedado -->
+      <iframe class="miniMapa"
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1187.3739624718687!2d-46.7718429!3d-23.5513246!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ceff6420c7c305%3A0x83093e199c292b5!2sAv.%20Dr.%20Martin%20Luther%20King%2C%20419%20-%20Umuarama%2C%20Osasco%20-%20SP%2C%2006030-010!5e1!3m2!1spt-BR!2sbr!4v1747965409537!5m2!1spt-BR!2sbr"
+        allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
     </section>
 
     <!-- Experiência Profissional -->
@@ -141,7 +145,7 @@
             <i class="fab fa-python"></i> PYTHON,
             <i class="fab fa-git"></i> GIT,
             <i class="fas fa-robot"></i> PROMPT PARA IA
-            
+
           </li>
           <li><strong>Ferramentas:</strong> SAP, SEI, Postman, Fortify, SIRCOI, Winfina, Visual Studio, TFS, Eclipse,
             Autbank, SoapUI.</li>
@@ -184,16 +188,16 @@
 
         <div class="form-group">
           <label for="mensagem">Mensagem:</label>
-          <textarea id="mensagem" name="mensagem" required placeholder="Oi, temos uma vaga para você"
-            rows="5"></textarea>
+          <textarea type="text" id="mensagem" name="mensagem" required
+            placeholder="Oi, temos uma vaga para você"></textarea>
         </div>
 
-        <div class="form-group">
-          <div class="checkbox-wrapper">
-            <input type="checkbox" id="lgpd" name="lgpd" required>
-            <label for="lgpd">Aceito compartilhar meus dados de acordo com a Lei Geral de Proteção de Dados
-              (LGPD)</label>
-          </div>
+        <div class="checkbox-wrapper">
+          <input type="checkbox" id="lgpd" name="lgpd" required>
+          <label for="lgpd">Aceito compartilhar meus dados de acordo com a Lei Geral de Proteção de Dados
+            (LGPD)</label>
+
+
           <div class="error-message" id="lgpd-error">
             <i class="fa fa-exclamation-circle"></i>
             <span>Por favor, aceite nossa política de privacidade para continuar</span>
@@ -201,8 +205,8 @@
         </div>
 
 
-        <div class="form-group">
-          <input type="submit" value="Enviar">
+        <div>
+          <input type="submit" class="btn-enviar" value="Enviar">
         </div>
       </form>
     </div>
